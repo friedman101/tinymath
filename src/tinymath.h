@@ -1,6 +1,5 @@
 #pragma once
 #include <stdint.h>
-#include <stdbool.h>
 
 int svd3(double A[3][3], double V[3][3], double s[3]);
 void mat3_by_vec3(double y[3], double A[3][3], double x[3]);
