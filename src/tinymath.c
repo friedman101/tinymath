@@ -90,7 +90,13 @@ double ang_between(double x1[3], double x2[3]) {
     double mag1 = mag3(x1);
     double mag2 = mag3(x2);
 
-    return acos(mydot/mag1/mag2);
+    double cos_ang = mydot/mag1/mag2;
+    if (cos_ang > 1)
+        cos_ang = 1;
+    if (cos_ang < -1)
+        cos_ang = -1;
+
+    return acos(cos_ang);
 }
 
 
