@@ -21,3 +21,4 @@ void mat3_add(double R[3][3], double U[3][3], double V[3][3]);
 void mat3_mult(double UV[3][3], double U[3][3], double V[3][3]);
 void trans3(double Y[3][3]);
 double det3(double x[3][3]);
+void vec3_by_scalar(double y[3], double x[3], double a);

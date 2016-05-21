@@ -176,7 +176,7 @@ void mat3_mult(double UV[3][3], double U[3][3], double V[3][3]) {
 }
 
 void trans3(double Y[3][3]) {
-    for (unsigned int i = 0; i < 3; i++) {
+    for (unsigned int i = 0; i < 2; i++) {
         for (unsigned int j = i+1; j < 3; j++) {
             double tmp = Y[i][j];
             Y[i][j] = Y[j][i];
@@ -191,4 +191,9 @@ double det3(double X[3][3]) {
         - X[2][0]*X[1][2]) + X[0][2]*(X[1][0]*X[2][1]
         - X[2][0]*X[1][1]);
     return det;
+}
+
+void vec3_by_scalar(double y[3], double x[3], double a) {
+    for (unsigned int i = 0; i < 3; i++)
+        y[i] = x[i]*a;
 }
