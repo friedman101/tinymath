@@ -50,7 +50,7 @@ void dcm2euler(double euler[3], const double dcm[3][3]) {
 }
 
 double uint8_std_mat(const void *x_tmp, unsigned int row, unsigned int col, const double mu) {
-    const uint8_t (*x)[col] = x_tmp;
+    const uint8_t (*x)[col] = (const uint8_t (*)[col]) x_tmp;
     double var = 0;
     for (unsigned int i = 0; i < row; i++) {
         for (unsigned int j = 0; j < col; j++) {
@@ -63,7 +63,7 @@ double uint8_std_mat(const void *x_tmp, unsigned int row, unsigned int col, cons
 }
 
 double uint8_mean_mat(const void *x_tmp, unsigned int row, unsigned int col) {
-    const uint8_t (*x)[col] = x_tmp;
+    const uint8_t (*x)[col] = (const uint8_t (*)[col]) x_tmp;
     double mu = 0;
     for (unsigned int i = 0; i < row; i++) {
         for (unsigned int j = 0; j < col; j++)
